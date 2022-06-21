@@ -1,0 +1,9 @@
+from csv import excel
+import pandas as pd
+excel_arquivo_df = pd.read_excel(r'D:\Downloads/Vendas - Dez.xlsx') #lê e abre o arquivo
+
+faturamento = excel_arquivo_df['Valor Final'].sum() #parametros de soma
+qntde_produtos = excel_arquivo_df['Quantidade'].sum() #parametros de soma
+
+print(f'O faturamento foi de R$ {faturamento:,.2f}') #resultados
+print(f'Quantidade de produtos vendidos {qntde_produtos:,}') #resultados
